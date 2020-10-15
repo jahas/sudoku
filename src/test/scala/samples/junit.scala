@@ -7,9 +7,12 @@ import Assert._
 class AppTest {
 
   @Test
-  def testOK() = assertTrue(true)
+  def testValid(){
+    // Given
 
-//   @Test
-//   def testKO() = assertTrue(false)
+    // When
+
+    // Then
+  }
 
 }

@@ -19,7 +19,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <encoding>UTF-8</encoding>
-    <scala.version>2.12.6</scala.version>
+    <scala.version>2.12.12</scala.version>
     <scala.compat.version>2.12</scala.compat.version>
     <spec2.version>4.2.0</spec2.version>
   </properties>
@@ -30,6 +30,12 @@
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.github.scopt</groupId>
+      <artifactId>scopt_2.12</artifactId>
+      <version>4.0.0-RC2</version>
+    </dependency>
+
 
     <!-- Test -->
     <dependency>
@@ -138,13 +144,13 @@
             </goals>
             <configuration>
               <outputDirectory>${basedir}/target</outputDirectory>
-              <resources>          
+              <resources>
                 <resource>
                   <directory>src/main/resources</directory>
                   <filtering>true</filtering>
                 </resource>
-              </resources>              
-            </configuration>            
+              </resources>
+            </configuration>
           </execution>
         </executions>
       </plugin>
