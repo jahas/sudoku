@@ -25,7 +25,10 @@ object App {
       )
     }
     OParser.parse(cliparser, args, CliConfig()) match {
-      case Some(config) => SudokuAnalyzer.analyze(config.input)
+      case Some(config) =>
+        if (SudokuAnalyzer.analyze(config.input.getAbsolutePath()))
+          println("Sudoku is valid!")
+        else println("Sudoku is invalid")
       case _ => new Exception("Wrong argument!")
     }
   }
