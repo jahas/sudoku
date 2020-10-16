@@ -11,7 +11,7 @@ class SudokuAnalyzerTest{
   @Test
   def testValid() {
     // Given
-    val file = "src/test/resources/valid1.csv"
+    val file = "src/test/resources/valid.csv"
 
     // When
     val result = SudokuAnalyzer.analyze(file)
