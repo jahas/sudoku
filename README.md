@@ -1,5 +1,10 @@
 # Sudoku analyzer
 
+- [Sudoku analyzer](#sudoku-analyzer)
+  - [Technology](#technology)
+  - [Usage](#usage)
+  - [Comments](#comments)
+  
 **Sudoku** tool has been designed to check if sudoku table is valid.
 
 *Valid* means that there are no repetitions of digit inside row, column or box.
