@@ -10,6 +10,11 @@ object App {
 
   def foo(x: Array[String]) = x.foldLeft("")((a, b) => a + b)
 
+  /**
+    * Main method - entry point to the program.
+    *
+    * @param args cli arguments.
+    */
   def main(args: Array[String]) {
     val builder = OParser.builder[CliConfig]
     val cliparser = {

@@ -55,4 +55,64 @@ class SudokuAnalyzerTest{
     // Then
     assertTrue(result)
   }
+
+  @Test
+  def testInvalidBecauseOfRow() {
+    // Given
+    val file = "src/test/resources/duplication_in_row.csv"
+
+    // When
+    val result = SudokuAnalyzer.analyze(file)
+
+    // Then
+    assertFalse(result)
+  }
+
+  @Test
+  def testInvalidBecauseOfColumn() {
+    // Given
+    val file = "src/test/resources/duplication_in_column.csv"
+
+    // When
+    val result = SudokuAnalyzer.analyze(file)
+
+    // Then
+    assertFalse(result)
+  }
+
+  @Test
+  def testInvalidBecauseOfBox() {
+    // Given
+    val file = "src/test/resources/duplication_in_box.csv"
+
+    // When
+    val result = SudokuAnalyzer.analyze(file)
+
+    // Then
+    assertFalse(result)
+  }
+
+  @Test
+  def testThatEmptyIsValid() {
+    // Given
+    val file = "src/test/resources/empty.csv"
+
+    // When
+    val result = SudokuAnalyzer.analyze(file)
+
+    // Then
+    assertTrue(result)
+  }
+  
+  @Test
+  def testThatCorrectlySolvedIsValid() {
+    // Given
+    val file = "src/test/resources/solved.csv"
+
+    // When
+    val result = SudokuAnalyzer.analyze(file)
+
+    // Then
+    assertTrue(result)
+  }
 }
